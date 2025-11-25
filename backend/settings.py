@@ -37,7 +37,6 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "https://quick-sos-front-7brg-git-main-luisenrique22xds-projects.vercel.app",
     "https://quicksosbackend-production.up.railway.app",
-    "https://quicksosbackend-production-1060.up.railway.app",
 ]
 
 

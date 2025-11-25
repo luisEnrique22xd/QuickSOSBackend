@@ -1,17 +1,39 @@
 import os
+import json
+import firebase_admin
+from firebase_admin import credentials, firestore
 
-# Detectar si estamos en CI o si no existe la llave
-IS_CI = os.getenv("CI") == "true"
-SERVICE_KEY_PATH = os.path.join("config", "keys", "serviceAccountKey.json")
+# --- Intentar inicializar Firebase SOLO si no está inicializado ---
+if not firebase_admin._apps:
 
-# Si estamos en CI o el archivo no existe → no inicializar firebase
-if IS_CI or not os.path.exists(SERVICE_KEY_PATH):
-    print("⚠️ Firebase Admin no inicializado (modo CI o llave faltante).")
-    db = None
-else:
-    import firebase_admin
-    from firebase_admin import credentials, firestore
+    # Detectar si estamos en Railway usando variables de entorno
+    firebase_env = os.getenv("FIREBASE_SERVICE_KEY")
 
-    cred = credentials.Certificate(SERVICE_KEY_PATH)
-    firebase_admin.initialize_app(cred)
-    db = firestore.client()
+    if firebase_env:  
+        print("🔥 Inicializando Firebase desde variables de entorno (Railway)")
+
+        # Convertir string del JSON a dict
+        cred_dict = json.loads(firebase_env)
+
+        # Corregir salto de línea en private_key si viene roto
+        if "private_key" in cred_dict:
+            cred_dict["private_key"] = cred_dict["private_key"].replace("\\n", "\n")
+
+        cred = credentials.Certificate(cred_dict)
+        firebase_admin.initialize_app(cred)
+
+    else:
+        # Modo local usando archivo .json
+        SERVICE_KEY_PATH = os.path.join("config", "keys", "serviceAccountKey.json")
+
+        if os.path.exists(SERVICE_KEY_PATH):
+            print("🔥 Inicializando Firebase desde archivo local")
+            cred = credentials.Certificate(SERVICE_KEY_PATH)
+            firebase_admin.initialize_app(cred)
+        else:
+            print("⚠️ Firebase NO inicializado (no existe archivo ni variable FIREBASE_SERVICE_KEY)")
+            db = None
+            exit()
+
+# Crear cliente Firestore
+db = firestore.client()

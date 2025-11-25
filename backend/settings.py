@@ -23,17 +23,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-!2njs(zb--ullra_a42nzsu(9(^x!*+odqd1yk=q%)m!mph^1g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:3000",
-#     "http://127.0.0.1:8000",
-#     "https://quick-sos-front-7brg-git-main-luisenrique22xds-projects.vercel.app",
-# ]
+CORS_ALLOWED_ORIGINS = [
+    # "http://localhost:3000",
+    # "http://127.0.0.1:8000",
+    "https://quick-sos-front-7brg-git-main-luisenrique22xds-projects.vercel.app",
+    "https://quicksosbackend-production.up.railway.app",
+]
 
-CORES_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = False
 # Application definition
 
 INSTALLED_APPS = [

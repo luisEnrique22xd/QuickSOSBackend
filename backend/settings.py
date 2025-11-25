@@ -27,14 +27,22 @@ DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3000",
+#     # "http://127.0.0.1:8000",
+#     "https://quick-sos-front-7brg-git-main-luisenrique22xds-projects.vercel.app",
+#     "https://quicksosbackend-production.up.railway.app",
+# ]
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    # "http://127.0.0.1:8000",
     "https://quick-sos-front-7brg-git-main-luisenrique22xds-projects.vercel.app",
     "https://quicksosbackend-production.up.railway.app",
+    "https://quicksosbackend-production-1060.up.railway.app",
 ]
 
+
 CORS_ALLOW_ALL_ORIGINS = False
+
 # Application definition
 
 INSTALLED_APPS = [

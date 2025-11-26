@@ -35,13 +35,10 @@ ALLOWED_HOSTS = ["*"]
 # ]
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://quick-sos-front-7brg-git-main-luisenrique22xds-projects.vercel.app",
     "https://quicksosbackend-production.up.railway.app",
-    "https://quick-sos-front-7brg-asqgjndnd-luisenrique22xds-projects.vercel.app",
     "https://quick-sos-front-7brg.vercel.app",
-    "https://quick-sos-front-7brg.vercel.app",
-    "https://quick-sos-front-w441.vercel.app",
-    "https://quick-sos-front.vercel.app",
+    "https://quick-sos-front-7brg-git-main-luisenrique22xds-projects.vercel.app",
+    "https://quick-sos-front-7brg-jqa8vgf02-luisenrique22xds-projects.vercel.app"
 ]
 
 

@@ -41,6 +41,7 @@ CORS_ALLOWED_ORIGINS = [
     "https://quick-sos-front-7brg.vercel.app",
     "https://quick-sos-front-7brg.vercel.app",
     "https://quick-sos-front-w441.vercel.app",
+    "https://quick-sos-front.vercel.app",
 ]
 
 

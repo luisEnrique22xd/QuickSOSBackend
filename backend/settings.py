@@ -39,6 +39,7 @@ CORS_ALLOWED_ORIGINS = [
     "https://quicksosbackend-production.up.railway.app",
     "https://quick-sos-front-7brg-asqgjndnd-luisenrique22xds-projects.vercel.app",
     "https://quick-sos-front-7brg.vercel.app",
+    "https://quick-sos-front-7brg.vercel.app",
 ]
 
 

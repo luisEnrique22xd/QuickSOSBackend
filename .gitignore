@@ -338,4 +338,4 @@ $RECYCLE.BIN/
 *.lnk
 
 config/keys/serviceAccountkey.json   
-# End of https://www.toptal.com/developers/gitignore/api/windows,macos,python,linux,djangox 
+# End of https://www.toptal.com/developers/gitignore/api/windows,macos,python,linux,djangox config/keys/serviceAccountKey.json

@@ -337,6 +337,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# Credenciales de Google Cloud
-config/keys/serviceAccountKey.json
+config/serviceaccountkey.json   
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,python,linux,djangox 

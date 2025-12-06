@@ -1,5 +1,4 @@
 from api.firebase_config import db
-from datetime import datetime, timedelta 
 import pytz
 
 def get_alerts():

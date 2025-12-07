@@ -337,7 +337,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# Archivos con secretos
-config/keys/serviceAccountKey.json
-
+config/keys/serviceAccountkey.json   
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,python,linux,djangox config/keys/serviceAccountKey.json
